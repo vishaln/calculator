@@ -6,60 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
     <title>Calculator</title>
-
   </head>
 
   <body>
 
-  <div class="container">
+    <center>
+      <h1>Calculator</h1>
 
-    <h1>Calculator</h1>
+  <div class="container bg-light">
 
-    <input type="text" class="text" disabled>
+      <input id="display" class="text" type="text" disabled>
+      
+    <div id="operator">
+        <button class="btn">+</button>  
+        <button class="btn">-</button>  
+        <button class="btn">x</button>         
+        <button class="btn">/</button>
+    </div>
+
+  <div class="d-inline-flex">
+      
+    <div id="numbers" class="bg-light">
+
+      <button class="btn"  value="7" onclick="display.value" += "7">7</button>  
+        <button class="btn" >8</button>  
+        <button class="btn">9</button>         
     
-    <div id="operators" class="keys mt-2" >
-      <button class="btn btn-outline-danger">/</button>  
-      <button class="btn btn-outline-danger">*</button>  
-      <button class="btn btn-outline-danger">-</button>  
-      <button class="btn btn-outline-danger">+</button>         
-    </div>
+<br>
+        <button class="btn">4</button>  
+        <button class="btn">5</button>  
+        <button class="btn">6</button>         
+    
+<br>
 
-    <div class="keys">
-      <button id="decimal" class="btn btn-outline-danger">.</button>  
-      <button class="btn btn-outline-danger">7</button>  
-      <button class="btn btn-outline-danger">8</button>  
-      <button class="btn btn-outline-danger">9</button>        
+        <button class="btn">1</button>  
+        <button class="btn">2</button>  
+        <button class="btn">3</button>         
+
+<br>
+
+        <button class="btn">0</button>  
+        <button class="btn">.</button>  
+        <button class="btn">C</button>
+      
     </div>
-      
-    <div class="keys">
-      <button class="btn btn-outline-danger">4</button>  
-      <button class="btn btn-outline-danger">5</button>  
-      <button class="btn btn-outline-danger">6</button>
-      <button id="equal" class="btn btn-outline-success">=</button> 
-    </div> 
-      
-    <div class="keys">      
-      <button class="btn btn-outline-danger">1</button>  
-      <button class="btn btn-outline-danger">2</button>  
-      <button class="btn btn-outline-danger">3</button>
-    </div>
-      
-    <div class="keys"> 
-      <button class="btn btn-outline-danger">0</button>  
-      <button id="clear" class="btn btn-outline-danger">C</button>
+    
+      <div id="equal" class="pl-1">
+        <button class="btn">=</button>
+      </div>        
+    
     </div>
 
   </div>
 
+    </center>
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
