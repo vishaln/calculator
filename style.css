@@ -1,0 +1,51 @@
+
+*{
+    margin: 0 auto;
+}
+
+
+
+#display{
+    background-color: black;
+    color: white;
+    width: 154px;
+    border: 1px solid orange;
+}
+
+#equal{
+    display: flex;
+}
+
+.btn{
+    width: 35px;
+}
+
+#equal .btn{
+    background-color: #f5a371;
+    color: white;
+}
+
+#equal .btn:hover{
+    background-color:#d6824f;
+        color: white;
+}
+
+#operator .btn{
+    background-color: #dbdbdb;
+}
+
+#operator .btn:hover{
+    background-color: #787878;
+    color: white;
+}
+
+#numbers .btn{
+    border-color: gray;
+    color: black;
+}
+
+#numbers .btn:hover{
+    background-color: #f5a371;
+    color: white;
+}
+
