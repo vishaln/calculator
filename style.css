@@ -1,0 +1,35 @@
+*{
+    margin: 0 auto;
+}
+
+#equal{
+    padding: 35px 15px;
+    position: absolute;
+    margin-left: 5px;
+    color: white;
+    background-color: #32a84a;
+}
+
+#clear{
+    padding: 10px 63px;
+    color: white;
+    background-color: red;
+}
+
+#operators .btn{
+    background-color:#db9532;
+    color: white;
+}
+
+#decimal{
+    background-color: #3dc7e3;
+    color: white;
+}
+
+.btn{
+    width: 40px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    color: black;
+    text-align: center;
+}
