@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> de71c01d4c77eab12673006b53380c532c7e74d1
 *{
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 #equal{
     padding: 35px 15px;
     position: absolute;
@@ -33,3 +38,51 @@
     color: black;
     text-align: center;
 }
+=======
+
+
+#display{
+    background-color: black;
+    color: white;
+    width: 154px;
+    border: 1px solid orange;
+}
+
+#equal{
+    display: flex;
+}
+
+.btn{
+    width: 35px;
+}
+
+#equal .btn{
+    background-color: #f5a371;
+    color: white;
+}
+
+#equal .btn:hover{
+    background-color:#d6824f;
+        color: white;
+}
+
+#operator .btn{
+    background-color: #dbdbdb;
+}
+
+#operator .btn:hover{
+    background-color: #787878;
+    color: white;
+}
+
+#numbers .btn{
+    border-color: gray;
+    color: black;
+}
+
+#numbers .btn:hover{
+    background-color: #f5a371;
+    color: white;
+}
+
+>>>>>>> de71c01d4c77eab12673006b53380c532c7e74d1
