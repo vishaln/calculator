@@ -1,47 +1,66 @@
-
 *{
     margin: 0 auto;
+    font-size: 30px;
+    text-align: center; 
 }
 
+.container{
+    width:450px;
+    display: flex;
+    background-color:#e7dcc4;
+    border-radius: 5%;
+    border: 4px solid black;
+}
+
+.btn{
+    text-align: center;
+    /* border-radius: 0%; (We can use this to remove rounded corners of the buttons) */
+}
+
+
+#operators .btn{
+    background-color: #eeeeee;
+}
+
+#operators .btn:hover{
+    background-color: #000000;
+    color: white;
+}
 
 
 #display{
     background-color: black;
     color: white;
-    width: 154px;
-    border: 1px solid orange;
+    height: 100px;
+    width: 100%;
+    margin-top: 0.5em;
+    border-color: white;
+    text-align: end;    /*(impact only when input enabled)*/
 }
 
-#equal{
-    display: flex;
+#operators{
+    width: 100%;
 }
 
-.btn{
-    width: 35px;
+#operators .btn{
+    border: 1px solid grey;
+    width: 25%;
 }
 
-#equal .btn{
-    background-color: #f5a371;
-    color: white;
+#num_equal{
+   width:100%;
+   margin-bottom: 0.5em;   
 }
 
-#equal .btn:hover{
-    background-color:#d6824f;
-        color: white;
-}
-
-#operator .btn{
-    background-color: #dbdbdb;
-}
-
-#operator .btn:hover{
-    background-color: #787878;
-    color: white;
+#numbers{
+    width: 75%;
 }
 
 #numbers .btn{
     border-color: gray;
+    background-color: #dbdbdb;
     color: black;
+    width: 33.3%;  
 }
 
 #numbers .btn:hover{
@@ -49,3 +68,27 @@
     color: white;
 }
 
+
+#equal{
+    display: flex;
+    width: 25%;
+}
+
+#equal .btn{
+    background-color: #f5a371;
+    border-color: grey;
+    color: white;
+    width: 100%;
+}
+
+#equal .btn:hover{
+    background-color:#d6824f;
+        color: white;
+}
+
+#numbers #decimal:hover{
+    background-color: #00adc4;
+}
+#numbers #clear:hover{
+    background-color: #ab0000;
+}
