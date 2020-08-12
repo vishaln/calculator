@@ -4,30 +4,6 @@
     text-align: center; 
 }
 
-.container{
-    width:450px;
-    display: flex;
-    background-color:#e7dcc4;
-    border-radius: 5%;
-    border: 4px solid black;
-}
-
-.btn{
-    text-align: center;
-    /* border-radius: 0%; (We can use this to remove rounded corners of the buttons) */
-}
-
-
-#operators .btn{
-    background-color: #eeeeee;
-}
-
-#operators .btn:hover{
-    background-color: #000000;
-    color: white;
-}
-
-
 #display{
     background-color: black;
     color: white;
@@ -86,9 +62,3 @@
         color: white;
 }
 
-#numbers #decimal:hover{
-    background-color: #00adc4;
-}
-#numbers #clear:hover{
-    background-color: #ab0000;
-}
