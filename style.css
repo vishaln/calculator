@@ -2,34 +2,47 @@
     margin: 0 auto;
 }
 
+#display{
+    background-color: black;
+    color: white;
+    width: 154px;
+    border: 1px solid orange;
+}
+
 #equal{
-    padding: 35px 15px;
-    position: absolute;
-    margin-left: 5px;
-    color: white;
-    background-color: #32a84a;
-}
-
-#clear{
-    padding: 10px 63px;
-    color: white;
-    background-color: red;
-}
-
-#operators .btn{
-    background-color:#db9532;
-    color: white;
-}
-
-#decimal{
-    background-color: #3dc7e3;
-    color: white;
+    display: flex;
 }
 
 .btn{
-    width: 40px;
-    padding: 10px 10px;
-    margin-bottom: 5px;
-    color: black;
-    text-align: center;
+    width: 35px;
 }
+
+#equal .btn{
+    background-color: #f5a371;
+    color: white;
+}
+
+#equal .btn:hover{
+    background-color:#d6824f;
+        color: white;
+}
+
+#operator .btn{
+    background-color: #dbdbdb;
+}
+
+#operator .btn:hover{
+    background-color: #787878;
+    color: white;
+}
+
+#numbers .btn{
+    border-color: gray;
+    color: black;
+}
+
+#numbers .btn:hover{
+    background-color: #f5a371;
+    color: white;
+}
+
