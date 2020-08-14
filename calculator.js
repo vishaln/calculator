@@ -2,16 +2,21 @@
 const calculator = document.querySelector('.calculator-main');
 const calcKeys = calculator.querySelector('.calc-keys');
 const calcDisplay = document.querySelector('.calc-display');
+let firstvalue; 
+let operand;
+let thirdvalue;
 calcKeys.addEventListener('click', ele=> {
     if(ele.target.matches('button')){
         // store element target into calcKey var
-        const calcKey = ele.target;
+        const calcKey = ele.target;   
+        debugger
 
         // store data action into calcAction var
         const calcAction = calcKey.dataset.action;
 
         // get Clicked value from textContent property
         const calcContent = calcKey.textContent;
+        console.log(calcContent)
 
         // get Clicked value from textContent property
         const displayClickedValue = calcDisplay.textContent;
@@ -22,15 +27,16 @@ calcKeys.addEventListener('click', ele=> {
             console.log('this is number');
             if(displayClickedValue === '0') {
                 // Current calcContent is 0 and its assigned to calcDisplay 
-                calcDisplay.textContent = calcContent;
+                 calcDisplay.textContent = calcContent;
             } else {
-                 // on data action add number in display area
+                // on data action add number in display area
                 calcDisplay.textContent = displayClickedValue + calcContent;
             }
         }
         // In case of data-action property as operator 
         if(calcAction === 'addition' || calcAction === 'subtract' || calcAction === 'multiply' || calcAction === 'divide') {
             console.log('this is operator');
+            calcDisplay.textContent = displayClickedValue + calcContent;
         }
         // In case of data-action property as decimal 
         if(calcAction === 'decimal') {
@@ -43,7 +49,8 @@ calcKeys.addEventListener('click', ele=> {
         }
         // In case of data-action property as calculate
         if(calcAction === 'calculate') {
-            console.log('this is calculate');
+            console.log(calcDisplay);
+            
         }
 
         // // In case of data-action property as calculate

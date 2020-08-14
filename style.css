@@ -17,6 +17,10 @@
     /* border-radius: 0%; (We can use this to remove rounded corners of the buttons) */
 }
 
+.calc-display{
+    background: #fff;
+}
+
 
 #operators .btn{
     background-color: #eeeeee;
@@ -29,7 +33,7 @@
 
 
 #display{
-    background-color: black;
+    background: #fff;
     color: white;
     height: 100px;
     width: 100%;
