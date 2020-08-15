@@ -2,94 +2,80 @@
 const calculator = document.querySelector('.calculator-main');
 const calcKeys = calculator.querySelector('.calc-keys');
 const calcDisplay = document.querySelector('.calc-display');
-let firstvalue; 
-let operand;
-let thirdvalue;
+let sum = 0; 
+let stroevalue;
+let displayClickedValue;
+let operand = false;
+let action = true;
+
 calcKeys.addEventListener('click', ele=> {
+    debugger
     if(ele.target.matches('button')){
         // store element target into calcKey var
         const calcKey = ele.target;   
-        debugger
-
+        
         // store data action into calcAction var
         const calcAction = calcKey.dataset.action;
 
         // get Clicked value from textContent property
         const calcContent = calcKey.textContent;
-        console.log(calcContent)
-
+        
         // get Clicked value from textContent property
-        const displayClickedValue = calcDisplay.textContent;
-        console.log(displayClickedValue);
+        displayClickedValue = calcDisplay.value;
         
         // In case of no data-action property, it is a number
         if(!calcAction) {
-            console.log('this is number');
             if(displayClickedValue === '0') {
                 // Current calcContent is 0 and its assigned to calcDisplay 
-                 calcDisplay.textContent = calcContent;
+                 calcDisplay.value = calcContent;
             } else {
                 // on data action add number in display area
-                calcDisplay.textContent = displayClickedValue + calcContent;
+                calcDisplay.value = displayClickedValue + calcContent;
+                // sum += parseFloat(displayClickedValue);
+                if (operand === 'subtract') {
+                    sum -= parseFloat(calcContent);
+                 }
+                 if (operand === 'addition') {
+                    sum += parseFloat(calcContent);
+                 } 
+                 
+                 if (operand === 'multiply') {
+                    sum *= parseFloat(calcContent);
+                 }
+                 
+                 if (operand === 'divide') {
+                    sum *= parseFloat(calcContent);
+                 }  
+               
             }
-        }
+        } 
+        
         // In case of data-action property as operator 
         if(calcAction === 'addition' || calcAction === 'subtract' || calcAction === 'multiply' || calcAction === 'divide') {
             console.log('this is operator');
-            calcDisplay.textContent = displayClickedValue + calcContent;
+            calcDisplay.value = displayClickedValue + calcContent;
+             if (calcAction === calcAction) {
+                if(action) {
+                    sum += parseFloat(displayClickedValue);
+                    action = false;
+                } 
+               
+                operand = calcAction;
+             } 
+            
         }
         // In case of data-action property as decimal 
         if(calcAction === 'decimal') {
             console.log('this is decimal');
-            calcDisplay.textContent = displayClickedValue + '.';
+            calcDisplay.value = displayClickedValue + '.';
         }
         // In case of data-action property as clear
         if(calcAction === 'clear') {
-            calcDisplay.textContent = '0';
+            calcDisplay.value = '0';
         }
         // In case of data-action property as calculate
         if(calcAction === 'calculate') {
-            console.log(calcDisplay);
-            
+             calcDisplay.value = sum;
         }
-
-        // // In case of data-action property as calculate
-        // if(calcAction === 'calculate') {
-        //     console.log('this is calculate');
-        // }
-
     }
 });
-
-//let calculationVal;
-
-// // Looping Button Alignment Using For Loop 
-// for (let x = 0; x < buttonContainer.length; x++) {
-//     buttonContainer[x].addEventListener("click", showConsole);
-// }
-
-// // Showing Value In input 
-// function showConsole() {
-//    inputValue.value += this.innerHTML;
-// }
-
-// // Calculation Input Value 
-// document.getElementById("calculation").addEventListener("click", showResult);
-// function showResult() {
-
-//     calculationVal = inputValue.value;
-//     for(count = 0; count < calculationVal.length; count++) {
-//         if(calculationVal[count]) {
-//             console.log("true")
-//         }else {
-//             alert("false")
-//         }
-//     }
-// }
-
-
-// // Clear Input Value Functionlity 
-// document.getElementById("clearCalcValue").addEventListener("click", clearResult);
-// function clearResult() {
-//     inputValue.value = "";
-// }
