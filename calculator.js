@@ -3,11 +3,10 @@ const calculator = document.querySelector('.calculator-main');
 const calcKeys = calculator.querySelector('.calc-keys');
 const calcDisplay = document.querySelector('.calc-display');
 let sum = 0; 
-let stroevalue;
 let displayClickedValue;
-let operand = false;
+let operand;
 let action = true;
-
+let currentOperator = false;
 calcKeys.addEventListener('click', ele=> {
     debugger
     if(ele.target.matches('button')){
@@ -29,6 +28,7 @@ calcKeys.addEventListener('click', ele=> {
                 // Current calcContent is 0 and its assigned to calcDisplay 
                  calcDisplay.value = calcContent;
             } else {
+                currentOperator = false;
                 // on data action add number in display area
                 calcDisplay.value = displayClickedValue + calcContent;
                 // sum += parseFloat(displayClickedValue);
@@ -43,8 +43,8 @@ calcKeys.addEventListener('click', ele=> {
                     sum *= parseFloat(calcContent);
                  }
                  
-                 if (operand === 'divide') {
-                    sum *= parseFloat(calcContent);
+                 if (operand === 'divide') { 
+                    sum /= parseFloat(calcContent);
                  }  
                
             }
@@ -52,26 +52,35 @@ calcKeys.addEventListener('click', ele=> {
         
         // In case of data-action property as operator 
         if(calcAction === 'addition' || calcAction === 'subtract' || calcAction === 'multiply' || calcAction === 'divide') {
-            console.log('this is operator');
-            calcDisplay.value = displayClickedValue + calcContent;
-             if (calcAction === calcAction) {
+            // Checking multiplue 1 time operator
+            if(currentOperator) {
+                calcDisplay.value = displayClickedValue;
+            } else {
+                calcDisplay.value = displayClickedValue + calcContent;
+            }
+            
+            currentOperator = calcAction;
+             if (calcAction) {
                 if(action) {
                     sum += parseFloat(displayClickedValue);
                     action = false;
                 } 
-               
                 operand = calcAction;
              } 
             
         }
         // In case of data-action property as decimal 
         if(calcAction === 'decimal') {
-            console.log('this is decimal');
             calcDisplay.value = displayClickedValue + '.';
+            
         }
         // In case of data-action property as clear
         if(calcAction === 'clear') {
             calcDisplay.value = '0';
+            displayClickedValue = "";
+            sum = 0;
+            operand = "";
+            action = true;
         }
         // In case of data-action property as calculate
         if(calcAction === 'calculate') {
