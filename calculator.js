@@ -88,7 +88,6 @@ calcKeys.addEventListener("click", ele => {
         parseFloat(splitNumber[1])
       );
       console.log(calculatdData.toString)
-      alert(splitNumber[0])
       // assign sum before second charactor
       calcDisplay.value = calculatdData.toString();
     }
