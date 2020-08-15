@@ -72,7 +72,7 @@ calcKeys.addEventListener('click', ele=> {
         // In case of data-action property as decimal 
         if(calcAction === 'decimal') {
             calcDisplay.value = displayClickedValue + '.';
-            
+            displayClickedValue = "";
         }
         // In case of data-action property as clear
         if(calcAction === 'clear') {
