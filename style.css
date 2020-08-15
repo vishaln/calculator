@@ -1,20 +1,20 @@
 *{
-    margin: 0 auto;
     font-size: 30px;
     text-align: center; 
 }
 
 .container{
+    margin: 0 auto;
     width:450px;
     display: flex;
-    background-color:#e7dcc4;
-    border-radius: 5%;
-    border: 4px solid black;
+    border-radius: 0%;
+    border: 2px solid black;
+    padding: 0;
 }
 
 .btn{
     text-align: center;
-    /* border-radius: 0%; (We can use this to remove rounded corners of the buttons) */
+    border-radius: 0%;
 }
 
 
@@ -23,7 +23,7 @@
 }
 
 #operators .btn:hover{
-    background-color: #000000;
+    background-color: #d6824f;
     color: white;
 }
 
@@ -33,7 +33,7 @@
     color: white;
     height: 100px;
     width: 100%;
-    margin-top: 0.5em;
+    padding: 2%;
     border-color: white;
     text-align: end;    /*(impact only when input enabled)*/
 }
@@ -49,7 +49,7 @@
 
 #num_equal{
    width:100%;
-   margin-bottom: 0.5em;   
+      
 }
 
 #numbers{
@@ -64,7 +64,7 @@
 }
 
 #numbers .btn:hover{
-    background-color: #f5a371;
+    background-color: grey;
     color: white;
 }
 
