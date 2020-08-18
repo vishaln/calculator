@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,58 +15,48 @@
 
   <body>
 
-    
-      <h1>Calculator</h1>
+  <h4>Calculator</h4>
 
-  <div class="container bg-light">
+  <div class="container flex-wrap calculator-main">
 
-      <input id="display" class="text" type="text" disabled>
-      
-    <div id="operator">
-        <button class="btn" data-action="addition">+</button>  
-        <button class="btn" data-action="subtract">-</button>  
-        <button class="btn" data-action="multiply">x</button>         
-        <button class="btn" data-action="divide">/</button>
+     <input id="display" class="calc-display" type="value" value="0" readonly> 
+    <div class="calc-keys">
+    <div id="operators" class="d-flex flex-wrap ">
+      <button class="btn" data-action="addition">+</button>
+      <button class="btn" data-action="subtract">-</button>
+      <button class="btn" data-action="multiply">*</button>
+      <button class="btn" data-action="divide">/</button>
     </div>
 
-  <div class="d-inline-flex">
-      
-    <div id="numbers" class="bg-light">
+      <div id="num_equal" class="d-inline-flex">
 
-      <button class="btn">7</button>  
-        <button class="btn" >8</button>  
-        <button class="btn">9</button>         
-    
-<br>
-        <button class="btn">4</button>  
-        <button class="btn">5</button>  
-        <button class="btn">6</button>         
-    
-<br>
+        <div id="numbers" class="d-flex flex-wrap">
+            <button class="btn">7</button>  
+            <button class="btn">8</button>  
+            <button class="btn">9</button>
+        
+            <button class="btn">4</button>  
+            <button class="btn">5</button>  
+            <button class="btn">6</button>
 
-        <button class="btn">1</button>  
-        <button class="btn">2</button>  
-        <button class="btn">3</button>         
+            <button class="btn">1</button>  
+            <button class="btn">2</button>  
+            <button class="btn">3</button>
 
-<br>
+            <button class="btn">0</button>  
+            <button id="decimal" class="btn" data-action="decimal">.</button>  
+            <button id="clear" class="btn" data-action="clear">C</button>
+        </div>
 
-        <button class="btn">0</button>  
-        <button class="btn" data-action="decimal">.</button>  
-        <button class="btn" data-action="clear">C</button>
-      
+        <div id="equal">
+          <button class="btn" data-action="calculate">=</button>
+        </div>        
+
+      </div>
     </div>
     
-      <div id="equal" class="pl-1">
-        <button class="btn" data-action="calculate">=</button>
-      </div>        
-    
-    </div>
-
   </div>
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="calculator.js"></script>
   </body>
 </html>

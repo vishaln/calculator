@@ -1,25 +1,85 @@
+/*# sourceMappingURL=bootstrap.min.css.map */
 *{
-    margin: 0 auto;
+    font-size: 30px;
+    text-align: center; 
 }
+
+.container{
+    margin: 0 auto;
+    width:450px;
+    display: flex;
+    border-radius: 0%;
+    border: 2px solid black;
+    padding: 0;
+}
+
+.btn{
+    text-align: center;
+    border-radius: 0%;
+}
+
+
+#operators .btn{
+    background-color: #eeeeee;
+}
+
+#operators .btn:hover{
+    background-color: #d6824f;
+    color: white;
+}
+
 
 #display{
     background-color: black;
     color: white;
-    width: 154px;
-    border: 1px solid orange;
+    height: 100px;
+    width: 100%;
+    padding: 2%;
+    border-color: white;
+    text-align: end;    /*(impact only when input enabled)*/
 }
+
+#operators{
+    width: 100%;
+}
+
+#operators .btn{
+    border: 1px solid grey;
+    width: 25%;
+}
+
+#num_equal{ 
+   width:100%;
+      
+}
+
+#numbers{
+    width: 75%;
+}
+
+#numbers .btn{
+    border-color: gray;
+    background-color: #dbdbdb;
+    color: black;
+    width: 33.3%;  
+}
+
+#numbers .btn:hover{
+    background-color: grey;
+    color: white;
+}
+
 
 #equal{
     display: flex;
-}
-
-.btn{
-    width: 35px;
+    width: 25%;
 }
 
 #equal .btn{
     background-color: #f5a371;
+    border-color: grey;
     color: white;
+    width: 100%;
 }
 
 #equal .btn:hover{
@@ -27,22 +87,9 @@
         color: white;
 }
 
-#operator .btn{
-    background-color: #dbdbdb;
+#numbers #decimal:hover{
+    background-color: #00adc4;
 }
-
-#operator .btn:hover{
-    background-color: #787878;
-    color: white;
+#numbers #clear:hover{
+    background-color: #ab0000;
 }
-
-#numbers .btn{
-    border-color: gray;
-    color: black;
-}
-
-#numbers .btn:hover{
-    background-color: #f5a371;
-    color: white;
-}
-
