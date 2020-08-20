@@ -18,41 +18,44 @@
   <h4>Calculator</h4>
 
   <div class="container flex-wrap calculator-main">
-
-     <input id="display" class="calc-display" type="value" value="0" readonly> 
+    
+    <input id="display" class="calc-display" type="value" value="0" readonly> 
+    
     <div class="calc-keys">
-    <div id="operators" class="d-flex flex-wrap ">
-      <button class="btn" data-action="addition">+</button>
-      <button class="btn" data-action="subtract">-</button>
-      <button class="btn" data-action="multiply">*</button>
-      <button class="btn" data-action="divide">/</button>
-    </div>
+
+      <div id="operators" class="d-flex flex-wrap ">
+        <button class="btn border-left-0" data-action="addition" onclick="this. blur();"> &plus; </button>
+        <button class="btn" data-action="subtract" onclick="this. blur();"> &minus; </button>
+        <button class="btn" data-action="multiply" onclick="this. blur();"> &times; </button>
+        <button class="btn border-right-0" data-action="divide" onclick="this. blur();"> &divide; </button>
+      </div>
 
       <div id="num_equal" class="d-inline-flex">
 
         <div id="numbers" class="d-flex flex-wrap">
-            <button class="btn">7</button>  
-            <button class="btn">8</button>  
-            <button class="btn">9</button>
-        
-            <button class="btn">4</button>  
-            <button class="btn">5</button>  
-            <button class="btn">6</button>
+          <button class="btn border-left-0" onclick="this. blur();">7</button>  
+          <button class="btn" onclick="this. blur();">8</button>  
+          <button class="btn" onclick="this. blur();">9</button>
+      
+          <button class="btn border-left-0" onclick="this. blur();">4</button>  
+          <button class="btn" onclick="this. blur();">5</button>  
+          <button class="btn" onclick="this. blur();">6</button>
 
-            <button class="btn">1</button>  
-            <button class="btn">2</button>  
-            <button class="btn">3</button>
+          <button class="btn border-left-0" onclick="this. blur();">1</button>  
+          <button class="btn" onclick="this. blur();">2</button>  
+          <button class="btn" onclick="this. blur();">3</button>
 
-            <button class="btn">0</button>  
-            <button id="decimal" class="btn" data-action="decimal">.</button>  
-            <button id="clear" class="btn" data-action="clear">C</button>
+          <button class="btn border-bottom-0 border-left-0" onclick="this. blur();">0</button>  
+          <button id="decimal" class="btn border-bottom-0" data-action="decimal" onclick="this. blur();">.</button>  
+          <button id="clear" class="btn border-bottom-0" data-action="clear" onclick="this. blur();">AC</button>
         </div>
 
         <div id="equal">
-          <button class="btn" data-action="calculate">=</button>
+          <button class="btn border-bottom-0 border-right-0 border-up-0" data-action="calculate" onclick="this. blur();">=</button>
         </div>        
 
       </div>
+      
     </div>
     
   </div>
