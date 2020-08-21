@@ -27,11 +27,13 @@ calcKeys.addEventListener("click", ele => {
       if (displayClickedValue === "0") {
         // Current calcContent is 0 and its assigned to calcDisplay
         calcDisplay.value = calcContent;
+
       } else {
         currentOperator = false;
         dicimalOperator = false;
         // on data action add number in display area
         calcDisplay.value = displayClickedValue + calcContent;
+        
       }
     }
 
@@ -82,6 +84,44 @@ calcKeys.addEventListener("click", ele => {
         calcDisplay.value = displayClickedValue + calcContent;
         dicimalOperator = true;
       }
+      const splitNumber = calcDisplay.value.split(/[\s()*/%+-]+/g);
+       // After Operator Click 
+      
+       if(splitNumber[0]) {
+        let dicimalFirstCount = 0; 
+        const dicimalCountfirst = splitNumber[0].split("");
+
+        for(let x = 0; x < dicimalCountfirst.length; x++) {
+          if(dicimalCountfirst[x] == ".") {
+            dicimalFirstCount += 1; 
+          }
+        }
+
+        if(dicimalFirstCount > 1) {
+          calcDisplay.value = displayClickedValue;
+        }
+     }
+    
+      
+      /// Before Opertor  
+      if(splitNumber[1]) {
+        let decimalcountval = 0; 
+        const dicimalCountsecond = splitNumber[1].split("");
+        
+        if(dicimalCountsecond[0] === ".") {
+           calcDisplay.value = displayClickedValue + '0' + calcContent;
+        }
+        for(let x = 0; x < dicimalCountsecond.length; x++) {
+          
+          if(dicimalCountsecond[x] == ".") {
+            decimalcountval += 1; 
+          }
+        }
+
+        if(decimalcountval > 1) {
+          calcDisplay.value = displayClickedValue;
+        }
+     }
     }
     // In case of data-action property as clear
     if (calcAction === "clear") {
@@ -97,9 +137,10 @@ calcKeys.addEventListener("click", ele => {
       //const splitOperator = calcDisplay.value.split(/\d/g).filter(Boolean);
       const splitNumber = calcDisplay.value.split(/[\s()*/%+-]+/g);
       const operatorValue = calcDisplay.value;
-      const operatorPattrn = /[-|+|*|/]/g;
+      const operatorPattrn = /[-|+|*|/]+/g;
       const splitOperator = operatorValue.match(operatorPattrn)
       console.log(splitOperator)
+      
       
       // calculate sum on click of second operator
       const calculatdData = this.calculateSum(
