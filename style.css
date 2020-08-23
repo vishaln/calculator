@@ -1,21 +1,24 @@
-/*# sourceMappingURL=bootstrap.min.css.map */
 *{
     font-size: 30px;
-    text-align: center; 
+    text-align: center;
 }
+
 
 .container{
     margin: 0 auto;
     width:450px;
     display: flex;
-    border-radius: 0%;
-    border: 2px solid black;
+    border-radius: 5%;
+    border: 0.1px solid #2125293d;
     padding: 0;
+    overflow: hidden;
 }
 
 .btn{
     text-align: center;
     border-radius: 0%;
+    border-color: #b4b6b9;
+    outline: none;
 }
 
 
@@ -23,7 +26,7 @@
     background-color: #eeeeee;
 }
 
-#operators .btn:hover{
+#operators .btn:active{
     background-color: #d6824f;
     color: white;
 }
@@ -35,37 +38,37 @@
     height: 100px;
     width: 100%;
     padding: 2%;
-    border-color: white;
+    border: none;
     text-align: end;    /*(impact only when input enabled)*/
 }
+
 
 #operators{
     width: 100%;
 }
 
 #operators .btn{
-    border: 1px solid grey;
+    
     width: 25%;
 }
 
 #num_equal{ 
    width:100%;
-      
 }
 
 #numbers{
-    width: 75%;
+    width: 75.4%;
 }
 
 #numbers .btn{
-    border-color: gray;
-    background-color: #dbdbdb;
+   
+    background-color: #f5f5f5;
     color: black;
     width: 33.3%;  
 }
 
-#numbers .btn:hover{
-    background-color: grey;
+#numbers .btn:active{
+    background-color: #d2d5d9;
     color: white;
 }
 
@@ -76,20 +79,21 @@
 }
 
 #equal .btn{
-    background-color: #f5a371;
-    border-color: grey;
+    background-image: linear-gradient(#fb9797d1, #c34d10f7);
     color: white;
     width: 100%;
 }
 
-#equal .btn:hover{
-    background-color:#d6824f;
-        color: white;
+
+#numbers #decimal:active{
+    background-color: #6dc8d6;
 }
 
-#numbers #decimal:hover{
-    background-color: #00adc4;
+#numbers #clear:active{
+    background-color: #af4c4c;
 }
-#numbers #clear:hover{
-    background-color: #ab0000;
+
+
+.btn:active{
+    box-shadow:inset 3px 4px 15px rgba(0,0,0,0.7);
 }
